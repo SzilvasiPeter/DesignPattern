@@ -1,4 +1,5 @@
-import proxy;
+package proxy;
+
 
 public class GumballMonitor {
     private GumballMachine gumballMachine;
