@@ -1,4 +1,4 @@
-package proxy;
+package proxy.gumball;
 
 public class GumballMachine {
     private String location;
