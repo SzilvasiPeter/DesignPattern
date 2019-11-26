@@ -1,6 +1,9 @@
 package proxy.gumball;
 
 
+import java.rmi.Naming;
+import java.rmi.server.ExportException;
+
 public class GumballMachineTestDrive {
     public static void main(String[] args) {
         int count = 0;
@@ -9,11 +12,14 @@ public class GumballMachineTestDrive {
             System.out.print("GumballMachine <name> <inventory>");
             System.exit(1);
         }
+        try{
+            count = Integer.parseInt(args[1]);
+            GumballMachine gumballMachine = new GumballMachine(args[0], count);
+            Naming.rebind("//" + args[0] + "/gumballmachine", gumballMachine);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-        count = Integer.parseInt(args[1]);
-        GumballMachine gumballMachine = new GumballMachine(args[0], count);
-
-        GumballMonitor gumballMonitor = new GumballMonitor(gumballMachine);
 
 //        gumballMonitor.report();
     }
