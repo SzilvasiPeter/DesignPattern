@@ -3,9 +3,9 @@ package proxy.gumball;
 import java.rmi.*;
 
 public class GumballMonitor {
-    private GumballMachine gumballMachine;
+    private GumballMachineRemote gumballMachine;
 
-    public GumballMonitor(GumballMachine gumballMachine) {
+    public GumballMonitor(GumballMachineRemote gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
 
