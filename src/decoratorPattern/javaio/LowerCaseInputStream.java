@@ -1,7 +1,5 @@
 package decoratorPattern.javaio;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.FileInputStream;
 import java.io.FilterInputStream;
 import java.io.IOException;
