@@ -1,5 +1,5 @@
 package compound;
 
-public interface Quackable {
+public interface Quackable extends QuackObservable {
     void Quack();
 }
