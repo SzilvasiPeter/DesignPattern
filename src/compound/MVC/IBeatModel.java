@@ -1,6 +1,7 @@
 package compound.MVC;
 
 public interface IBeatModel {
+    void initialize();
     void on();
     void off();
     void setBPM(int bpm);
