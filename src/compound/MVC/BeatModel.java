@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class BeatModel implements IBeatModel, MetaEventListener {
     Sequencer sequencer;
     ArrayList<BeatObserver> beatObservers = new ArrayList<BeatObserver>();
-    ArrayList<BMPObserver> bmpObservers = new ArrayList<BMPObserver>();
+    ArrayList<BPMObserver> BPMObservers = new ArrayList<BPMObserver>();
     int bmp = 90;
 
     public void initialize(){
@@ -59,16 +59,16 @@ public class BeatModel implements IBeatModel, MetaEventListener {
     }
 
     @Override
-    public void registerObserver(BMPObserver bmpObserver) {
-        if(bmpObserver != null){
-            this.bmpObservers.add(bmpObserver);
+    public void registerObserver(BPMObserver BPMObserver) {
+        if(BPMObserver != null){
+            this.BPMObservers.add(BPMObserver);
         }
     }
 
     @Override
-    public void removeObserver(BMPObserver bmpObserver) {
-        if(bmpObserver != null){
-            int bmpObserverId = bmpObserver.getId();
+    public void removeObserver(BPMObserver BPMObserver) {
+        if(BPMObserver != null){
+            int bmpObserverId = BPMObserver.getId();
             this.beatObservers.remove(bmpObserverId);
         }
     }

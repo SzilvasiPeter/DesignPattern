@@ -8,6 +8,6 @@ public interface IBeatModel {
     int getBPM();
     void registerObserver(BeatObserver beatObserver);
     void removeObserver(BeatObserver beatObserver);
-    void registerObserver(BMPObserver bmpObserver);
-    void removeObserver(BMPObserver bmpObserver);
+    void registerObserver(BPMObserver BPMObserver);
+    void removeObserver(BPMObserver BPMObserver);
 }
